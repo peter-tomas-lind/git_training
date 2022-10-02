@@ -1,0 +1,45 @@
+working tree, staging area, repository
+committed, staged, modified
+untracked unmodified=commited modified staged
+git clone url
+git init
+git config user.name
+git config --list
+git status 
+git diff
+git diff --staged
+git status -s
+git commit -a -m
+	adds all already tracked files
+git rm
+	removes from tracked files and from working directory
+git rm --cached fname
+	removes from tracked files but leaves file in working directory
+git mv fname1 fname2
+git log -p
+git log --oneline
+git log -- path/to/file
+git log --grep commitmessage
+git checkout -- fname
+	for fname, go back to state of last commit. (unmodify) Use with care
+git reset HEAD fname
+	unnstage fname
+git restore --staged fname
+	also unmodify, use with care
+git restore --staged fnmame
+	unstage fname
+git commit --amend
+git remote
+	lists remotes
+git remote -v
+	lists urls for remotes
+git fetch remotename
+	download data but leave work unchanged. remotename tyoically origin
+git pull 
+	fetch and try merge
+git config --global pull.rebase "false"/"true"
+	set pull behaviour
+git push origin master
+	works if noone else has pushed
+
+	typical workflow is first fetch, merge, then push
